@@ -64,7 +64,7 @@ h3 {
 ul { list-style: none; padding: 0; margin: 0; }
 
 .pubs li { margin-bottom: 1.1rem; }
-.pubs .title { display: block; font-weight: 500; }
+.pubs .title { display: block; font-weight: 500; width: fit-content; }
 .pubs .venue { display: block; color: var(--muted); font-size: 1.05rem; }
 
 details { margin-top: 0.2rem; }
@@ -104,3 +104,12 @@ footer {
   .about { flex-direction: column; }
   .portrait { width: 7rem; }
 }
+
+/* Hide anything left blank */
+nav a[href=""] { display: none; }
+a.title[href=""] { color: var(--text); pointer-events: none; }
+p:empty, .role:empty, .venue:empty, h1:empty { display: none; }
+details:has(p:empty) { display: none; }
+ul.pubs:not(:has(li)), ul.plain:not(:has(li)) { display: none; }
+h3:not(:has(+ ul > li)) { display: none; }
+footer:has(p:empty) { border-top: none; }

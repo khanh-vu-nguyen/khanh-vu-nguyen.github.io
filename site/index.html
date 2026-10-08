@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name — Philosophy</title>
-  <meta name="description" content="Personal academic website of Your Name, philosopher.">
+  <!-- Your name as it should appear in the browser tab -->
+  <title></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -13,24 +13,39 @@
 <body>
   <main>
     <header>
-      <h1>Your Name</h1>
-      <p class="role">Assistant Professor of Philosophy · Your University</p>
+      <!-- Your name -->
+      <h1></h1>
+      <!-- Your position, e.g. "PhD Student in Philosophy · University" -->
+      <p class="role"></p>
+
+      <!--
+        Links. Put the address between the quotes after href.
+        Any link left as href="" is hidden automatically.
+          - CV:     upload your file as site/cv.pdf, then use href="cv.pdf"
+          - Email:  href="mailto:you@example.com"
+          - Others: paste the full address, e.g. href="https://bsky.app/profile/you"
+      -->
       <nav>
         <a href="#research">Research</a>
         <a href="#teaching">Teaching</a>
-        <a href="cv.pdf">CV</a>
-        <a href="mailto:you@university.edu">Email</a>
+        <a href="">CV</a>
+        <a href="">Email</a>
+        <a href="">PhilPeople</a>
+        <a href="">Google Scholar</a>
+        <a href="">PhilPapers</a>
+        <a href="">Bluesky</a>
+        <a href="">X</a>
+        <a href="">LinkedIn</a>
+        <a href="">GitHub</a>
       </nav>
     </header>
 
     <section id="about" class="about">
-      <img src="photo.jpg" alt="Portrait of Your Name" class="portrait" onerror="this.remove()">
+      <!-- Upload a photo as site/photo.jpg and it appears here; otherwise nothing shows -->
+      <img src="photo.jpg" alt="" class="portrait" onerror="this.remove()">
       <div>
-        <p>I am an assistant professor of philosophy at Your University. I work mainly in ethics,
-        especially population ethics and the theory of value, and in social choice theory and decision theory.
-        I am also interested in the philosophy of language, especially generics and bare plurals.</p>
-        <p>Before coming to Your University, I received my PhD from Another University and my BA from
-        Third University.</p>
+        <!-- Your bio. Add more <p></p> lines for more paragraphs. -->
+        <p></p>
       </div>
     </section>
 
@@ -39,70 +54,61 @@
 
       <h3>Book</h3>
       <ul class="pubs">
+        <!--
+          Copy this block once per item, and remove the comment markers around it.
+          href: a PDF you uploaded to site/papers/ (href="papers/my-paper.pdf")
+                or a journal / PhilArchive link (href="https://...").
+          Leave href="" for a title with no link.
+
         <li>
-          <span class="title"><a href="#">Title of the Book</a></span>
-          <span class="venue">Oxford University Press, forthcoming</span>
+          <a class="title" href=""></a>
+          <span class="venue"></span>
           <details><summary>Abstract</summary>
-            <p>A short description of the book's central argument goes here. Two or three sentences
-            that say what question it answers and why the answer matters.</p>
+            <p></p>
           </details>
         </li>
+        -->
       </ul>
 
       <h3>Papers</h3>
       <ul class="pubs">
+        <!-- Same block as above.
         <li>
-          <span class="title"><a href="#">Title of a Recent Paper</a></span>
-          <span class="venue"><em>Philosophical Review</em>, 2025</span>
+          <a class="title" href=""></a>
+          <span class="venue"></span>
           <details><summary>Abstract</summary>
-            <p>This paper argues that a widely accepted principle about comparing outcomes is
-            inconsistent with a natural view about how value aggregates. I propose a replacement and
-            defend it against several objections.</p>
+            <p></p>
           </details>
         </li>
-        <li>
-          <span class="title"><a href="#">A Second Paper</a></span>
-          <span class="venue">with Co-Author · <em>Noûs</em>, 2024</span>
-          <details><summary>Abstract</summary>
-            <p>Abstract text. Replace with your own.</p>
-          </details>
-        </li>
-        <li>
-          <span class="title"><a href="#">A Third Paper</a></span>
-          <span class="venue"><em>Ethics</em>, 2023</span>
-          <details><summary>Abstract</summary>
-            <p>Abstract text. Replace with your own.</p>
-          </details>
-        </li>
-        <li>
-          <span class="title"><a href="#">An Earlier Paper</a></span>
-          <span class="venue"><em>Philosophy &amp; Public Affairs</em>, 2021</span>
-          <details><summary>Abstract</summary>
-            <p>Abstract text. Replace with your own.</p>
-          </details>
-        </li>
+        -->
       </ul>
 
-      <h3>Work in Progress</h3>
+      <h3>Drafts</h3>
       <ul class="pubs">
+        <!-- Upload drafts to site/drafts/ and link them with href="drafts/my-draft.pdf".
         <li>
-          <span class="title">A Paper Under Review</span>
-          <span class="venue">draft available on request</span>
+          <a class="title" href=""></a>
+          <span class="venue"></span>
+          <details><summary>Abstract</summary>
+            <p></p>
+          </details>
         </li>
+        -->
       </ul>
     </section>
 
     <section id="teaching">
       <h2>Teaching</h2>
       <ul class="plain">
-        <li><span class="course">PHIL 101</span> Introduction to Ethics</li>
-        <li><span class="course">PHIL 340</span> Population Ethics</li>
-        <li><span class="course">PHIL 560</span> Graduate Seminar: Value Theory</li>
+        <!-- One line per course:
+        <li><span class="course"></span> </li>
+        -->
       </ul>
     </section>
 
     <footer>
-      <p>Department of Philosophy · Your University · Building, Room 000</p>
+      <!-- Department, address, office -->
+      <p></p>
     </footer>
   </main>
 </body>
