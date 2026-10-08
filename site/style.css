@@ -29,6 +29,8 @@ h1 { font-weight: 500; font-size: 2.4rem; margin: 0; }
 
 /* Links: one plain line, separated by dots */
 nav a:not([href=""]) ~ a:not([href=""])::before { content: "·"; display: inline-block; margin: 0 0.6rem; text-decoration: none; }
+nav a { text-decoration: none; }
+nav a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
 nav a[href=""] { display: none; }
 
 .about { display: flex; gap: 1.75rem; align-items: flex-start; }
