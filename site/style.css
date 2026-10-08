@@ -1,18 +1,6 @@
 :root {
-  --bg: #fdfcf9;
-  --text: #1f1d1a;
-  --muted: #6b665e;
-  --link: #8a2a1c;
-  --rule: #e4dfd5;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #181715;
-    --text: #e8e4dc;
-    --muted: #a39d92;
-    --link: #e0917f;
-    --rule: #34312c;
-  }
+  --bg: #fff;
+  --text: #000;
 }
 
 * { box-sizing: border-box; }
@@ -27,76 +15,44 @@ body {
 }
 
 main {
-  max-width: 42rem;
+  max-width: 40rem;
   margin: 0 auto;
   padding: 4rem 1rem 3rem;
 }
 
-a { color: var(--link); text-decoration: none; }
-a:hover { text-decoration: underline; text-underline-offset: 2px; }
+a { color: var(--text); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
 
-header { margin-bottom: 2.5rem; }
-h1 { font-weight: 500; font-size: 2.4rem; margin: 0; letter-spacing: 0.01em; }
-.role { margin: 0.2rem 0 1rem; color: var(--muted); font-style: italic; }
+header { margin-bottom: 2rem; }
+h1 { font-weight: 500; font-size: 2.4rem; margin: 0; }
+.role { margin: 0.1rem 0 0.75rem; font-style: italic; }
 
-nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; font-variant: small-caps; letter-spacing: 0.05em; }
+/* Links: one plain line, separated by dots */
+nav a + a::before { content: "·"; display: inline-block; margin: 0 0.6rem; text-decoration: none; }
+nav a[href=""] { display: none; }
 
 .about { display: flex; gap: 1.75rem; align-items: flex-start; }
 .about p { margin: 0 0 1rem; }
-.portrait { width: 9rem; height: auto; border-radius: 2px; flex-shrink: 0; }
+.portrait { width: 9rem; height: auto; filter: grayscale(1); flex-shrink: 0; }
 
-h2 {
-  font-weight: 500;
-  font-size: 1.5rem;
-  margin: 3rem 0 0.5rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--rule);
-}
-h3 {
-  font-weight: 500;
-  font-size: 1rem;
-  font-variant: small-caps;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-  margin: 1.75rem 0 0.5rem;
-}
+h2 { font-weight: 500; font-size: 1.45rem; margin: 2.75rem 0 0.75rem; }
+h3 { font-weight: 500; font-size: 1.15rem; font-style: italic; margin: 1.5rem 0 0.5rem; }
 
 ul { list-style: none; padding: 0; margin: 0; }
 
 .pubs li { margin-bottom: 1.1rem; }
-.pubs .title { display: block; font-weight: 500; width: fit-content; }
-.pubs .venue { display: block; color: var(--muted); font-size: 1.05rem; }
+.pubs .title { display: block; width: fit-content; }
+.pubs .venue { display: block; }
 
-details { margin-top: 0.2rem; }
-summary {
-  cursor: pointer;
-  color: var(--link);
-  font-size: 0.95rem;
-  font-variant: small-caps;
-  letter-spacing: 0.05em;
-  list-style: none;
-  width: fit-content;
-}
+details { margin-top: 0.15rem; }
+summary { cursor: pointer; width: fit-content; font-size: 1rem; list-style: none; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 summary::-webkit-details-marker { display: none; }
-summary::before { content: "+ "; }
-details[open] summary::before { content: "− "; }
-details p {
-  margin: 0.4rem 0 0;
-  padding-left: 1rem;
-  border-left: 2px solid var(--rule);
-  font-size: 1.05rem;
-}
+details p { margin: 0.4rem 0 0; padding-left: 1rem; border-left: 1px solid var(--text); font-size: 1.05rem; }
 
 .plain li { margin-bottom: 0.35rem; }
-.course { display: inline-block; min-width: 6rem; color: var(--muted); }
+.course { display: inline-block; min-width: 6rem; }
 
-footer {
-  margin-top: 4rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
-  color: var(--muted);
-  font-size: 0.95rem;
-}
+footer { margin-top: 3.5rem; font-size: 0.95rem; }
 
 @media (max-width: 560px) {
   main { padding-top: 2.5rem; }
@@ -106,10 +62,10 @@ footer {
 }
 
 /* Hide anything left blank */
-nav a[href=""] { display: none; }
-a.title[href=""] { color: var(--text); pointer-events: none; }
+a.title[href=""] { text-decoration: none; pointer-events: none; }
 p:empty, .role:empty, .venue:empty, h1:empty { display: none; }
+nav:not(:has(a:not([href=""]))) { display: none; }
 details:has(p:empty) { display: none; }
-ul.pubs:not(:has(li)), ul.plain:not(:has(li)) { display: none; }
+ul.pubs:not(:has(> li)), ul.plain:not(:has(> li)) { display: none; }
 h3:not(:has(+ ul > li)) { display: none; }
-footer:has(p:empty) { border-top: none; }
+section:not(:has(li)):not(.about) { display: none; }
