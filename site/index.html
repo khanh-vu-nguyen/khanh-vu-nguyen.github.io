@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Your name as it should appear in the browser tab -->
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <!-- Your name -->
+      <h1></h1>
+      <!-- Your position, e.g. "PhD Student in Philosophy · University" -->
+      <p class="role"></p>
+
+      <!--
+        Links. Put the address between the quotes after href.
+        Any link left as href="" is hidden automatically.
+          - CV:     upload your file as site/cv.pdf, then use href="cv.pdf"
+          - Email:  href="mailto:you@example.com"
+          - Others: paste the full address, e.g. href="https://bsky.app/profile/you"
+      -->
+      <nav>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="">CV</a>
+        <a href="">Email</a>
+        <a href="">PhilPeople</a>
+        <a href="">Google Scholar</a>
+        <a href="">PhilPapers</a>
+        <a href="">Bluesky</a>
+        <a href="">X</a>
+        <a href="">LinkedIn</a>
+        <a href="">GitHub</a>
+      </nav>
+    </header>
+
+    <section id="about" class="about">
+      <!-- Upload a photo as site/photo.jpg and it appears here; otherwise nothing shows -->
+      <img src="photo.jpg" alt="" class="portrait" onerror="this.remove()">
+      <div>
+        <!-- Your bio. Add more <p></p> lines for more paragraphs. -->
+        <p></p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <h3>Book</h3>
+      <ul class="pubs">
+        <!--
+          Copy this block once per item, and remove the comment markers around it.
+          href: a PDF you uploaded to site/papers/ (href="papers/my-paper.pdf")
+                or a journal / PhilArchive link (href="https://...").
+          Leave href="" for a title with no link.
+
+        <li>
+          <a class="title" href=""></a>
+          <span class="venue"></span>
+          <details><summary>Abstract</summary>
+            <p></p>
+          </details>
+        </li>
+        -->
+      </ul>
+
+      <h3>Papers</h3>
+      <ul class="pubs">
+        <!-- Same block as above.
+        <li>
+          <a class="title" href=""></a>
+          <span class="venue"></span>
+          <details><summary>Abstract</summary>
+            <p></p>
+          </details>
+        </li>
+        -->
+      </ul>
+
+      <h3>Drafts</h3>
+      <ul class="pubs">
+        <!-- Upload drafts to site/drafts/ and link them with href="drafts/my-draft.pdf".
+        <li>
+          <a class="title" href=""></a>
+          <span class="venue"></span>
+          <details><summary>Abstract</summary>
+            <p></p>
+          </details>
+        </li>
+        -->
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <ul class="plain">
+        <!-- One line per course:
+        <li><span class="course"></span> </li>
+        -->
+      </ul>
+    </section>
+
+    <footer>
+      <!-- Department, address, office -->
+      <p></p>
+    </footer>
+  </main>
+</body>
+</html>
