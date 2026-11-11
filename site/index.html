@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Your name as it should appear in the browser tab -->
   <title>Khanh Vu</title>
+  <!-- The summary shown in search results and when the link is shared -->
+  <meta name="description" content="Khanh Vu, MA Candidate at the University of Salzburg.">
+  <meta property="og:title" content="Khanh Vu">
+  <meta property="og:description" content="MA Candidate, University of Salzburg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://khanh-vu-nguyen.github.io/">
+  <link rel="canonical" href="https://khanh-vu-nguyen.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -22,12 +30,14 @@
         Links. Put the address between the quotes after href.
         Any link left as href="" is hidden automatically.
           - CV:     upload your file as site/cv.pdf, then use href="cv.pdf"
-          - Email:  shown as plain text with [at] instead of @, so spam bots cannot collect it
+          - Email:  shown with [at] instead of @. script.js turns it into a clickable link,
+                    so the real address never appears in this file. To change it, edit
+                    data-user, data-domain and the visible text.
           - Others: paste the full address, e.g. href="https://bsky.app/profile/you"
       -->
       <nav>
         <a href="">CV</a>
-        <span class="email">khanhvu2004work[at]gmail.com</span>
+        <a class="email" data-user="khanhvu2004work" data-domain="gmail.com">khanhvu2004work[at]gmail.com</a>
         <a href="">PhilPeople</a>
         <a href="">Google Scholar</a>
         <a href="">PhilPapers</a>
@@ -107,7 +117,10 @@
     <footer>
       <!-- Department, address, office -->
       <p></p>
+      <!-- Filled in automatically with the date the site was last published -->
+      <p id="updated"></p>
     </footer>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>
